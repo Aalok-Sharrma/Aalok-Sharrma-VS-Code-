@@ -49,6 +49,3 @@ public class Water_Trapped {
     }
 }
 
-// user.name = Aalok Sharrma
-// user.email = aalokkumarsharrma@gmail.com
-// user.passward = Vosmic-suhji4-sogpoxX@
