@@ -6,9 +6,9 @@ public class D9_18_1_Best_Time_To_Buy_Or_Sell_Stock {
 
     public static int Best_Time_To_Buy_Or_Sell_Stock(int Prices[]){
 
-        int BuyPrice = Integer.MAX_VALUE;
+        int BuyPrice = Integer.MAX_VALUE;   // here we can have BuyPrice = Prices[0];
         int MaxProfit = 0;
-        for(int i=0; i<Prices.length; i++){
+        for(int i=0; i<Prices.length; i++){ // here we can start loop with i=1 if BuyPrice is initialted with Prices[0] (means BuyPrice = Prices[0])
 
             if(Prices[i]>BuyPrice){
                 int Profit = Prices[i] - BuyPrice;
