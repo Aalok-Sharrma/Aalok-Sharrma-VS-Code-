@@ -4,6 +4,8 @@ import java.util.Arrays;
 
 public class Q_A_2_1_Rearange_Subarray_In_Initial_Array {
 
+    // It is a My Code For Rearange_Subarray_In_Initial_Array.
+
     /* This Approach is true for target = 3 only because this is not a optimized approach 
        (optimized code) and for optimized approach (optimized code) you can see the code 
        of Q_A_2_2_Rearange_Subarray_In_Initial_Array. */
