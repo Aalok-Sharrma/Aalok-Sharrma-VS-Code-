@@ -2,7 +2,7 @@ package DAY_9_Array.D9_19_Question_D9_20_Answers;
 
 public class Q_A_1_1_Check_Did_Any_Number_In_A_Array_Is_Repeticing_Or_Not {
 
-    // It is a Shradha Kapara Ma'am code For Did Any Number is Repeted In Array.
+    // It is a My Code For Did Any Number is Repeted In Array.
     
     public static boolean DidAnyNumberRepetedInArray(int a[]){
         for(int i=0; i<a.length; i++){
