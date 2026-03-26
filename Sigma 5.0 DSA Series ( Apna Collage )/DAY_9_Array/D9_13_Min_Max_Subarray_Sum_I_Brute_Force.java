@@ -2,7 +2,7 @@ package DAY_9_Array;
 
 public class D9_13_Min_Max_Subarray_Sum_I_Brute_Force {
     
-    public static void Min_Max_Subarray_Sum_I_Brute_Force(int a[]){
+    public static void minMaxSubarraySumIBruteForce(int a[]){
 
 /*
 
@@ -13,37 +13,37 @@ public class D9_13_Min_Max_Subarray_Sum_I_Brute_Force {
 
 */
 
-        int MaxSubarraySum = Integer.MIN_VALUE;
-        int MinSubarraySum = Integer.MAX_VALUE;
-        int A = 1;
+        int maxSubarraySum = Integer.MIN_VALUE;
+        int minSubarraySum = Integer.MAX_VALUE;
+        int b = 1;
 
         for(int i=0; i<a.length; i++){
             for(int j=i; j<a.length; j++){
-                int CurrentSum = 0;
+                int currentSum = 0;
                 for(int k=i; k<=j; k++){
-                    CurrentSum += a[k];
+                    currentSum += a[k];
                 }
-                System.out.println("("+A+") "+CurrentSum);
-                A++;
-                if(CurrentSum > MaxSubarraySum){
-                    MaxSubarraySum = CurrentSum;
+                System.out.println("("+b+") "+currentSum);
+                b++;
+                if(currentSum > maxSubarraySum){
+                    maxSubarraySum = currentSum;
                 }
-                if(CurrentSum < MinSubarraySum){
-                    MinSubarraySum = CurrentSum;
+                if(currentSum < minSubarraySum){
+                    minSubarraySum = currentSum;
                 }
             }
             System.out.println();
         }
 
-        System.out.println("Maximum SubArray Sum is : "+MaxSubarraySum);
-        System.out.println("Minimum SubArray Sum is : "+MinSubarraySum);
+        System.out.println("Maximum SubArray Sum is : "+maxSubarraySum);
+        System.out.println("Minimum SubArray Sum is : "+minSubarraySum);
     }
 
     public static void main(String[] args) {
 
         int a[] = {1,5,-2,-6,5,8};
 
-        Min_Max_Subarray_Sum_I_Brute_Force(a);
+        minMaxSubarraySumIBruteForce(a);
         
     }
 }

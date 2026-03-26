@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class D7_20_Code_of_convertion_from_decimal_to_binary {
 
-    public static void DecToBin(int DecNum){
+    public static void decToBin(int decNum){
 
-        int MyNum = DecNum;
-        int Pow = 0;
-        int BinNum = 0;
-        while (DecNum > 0) {
+        int myNum = decNum;
+        int pow = 0;
+        int binNum = 0;
+        while (decNum > 0) {
 
-            int Rem = DecNum%2;
-            BinNum = BinNum+(Rem*(int) Math.pow(10,Pow));
-            Pow++;
-            DecNum = DecNum/2;
+            int rem = decNum%2;
+            binNum = binNum+(rem*(int) Math.pow(10,pow));
+            pow++;
+            decNum = decNum/2;
             
-        }System.out.println("Binary number of "+MyNum+" is : "+BinNum);
+        }System.out.println("Binary number of "+myNum+" is : "+binNum);
     }
     public static void main(String[] args) {
         
@@ -25,6 +25,6 @@ public class D7_20_Code_of_convertion_from_decimal_to_binary {
         System.out.print("Enter the decimal number whose binary number you needed : ");
         int n=sc.nextInt();
         
-        DecToBin(n);
+        decToBin(n);
     }
 }

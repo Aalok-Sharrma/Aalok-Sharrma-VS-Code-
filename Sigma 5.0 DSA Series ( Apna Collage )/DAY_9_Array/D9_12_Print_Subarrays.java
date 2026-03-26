@@ -2,7 +2,7 @@ package DAY_9_Array;
 
 public class D9_12_Print_Subarrays {
     
-    public static int Print_Subarrays(int a[]){
+    public static int printSubarrays(int a[]){
 
 /*
          ------------------------------------ Logic to calculate TotalSubarrays ------------------------------------
@@ -16,23 +16,23 @@ public class D9_12_Print_Subarrays {
          
 */
 
-        int TotalSubArray=0;
+        int totalSubArray=0;
         for(int i=0; i<a.length; i++){
             for(int j=i; j<a.length; j++){
                 for(int k=i; k<=j; k++){
                     System.out.print(a[k]+" ");
                 }
-                TotalSubArray++;
+                totalSubArray++;
                 System.out.print("  ");
             }
             System.out.println();
         }
-        return TotalSubArray;
+        return totalSubArray;
     }
 
     public static void main(String[] args) {
 
         int a[] = {1,2,3,4,5};
-        System.out.println("Total number of Subarrays are : "+Print_Subarrays(a));
+        System.out.println("Total number of Subarrays are : "+printSubarrays(a));
     }
 }

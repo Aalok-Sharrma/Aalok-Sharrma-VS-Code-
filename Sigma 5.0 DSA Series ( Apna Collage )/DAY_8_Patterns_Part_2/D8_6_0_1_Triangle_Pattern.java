@@ -2,7 +2,7 @@ package DAY_8_Patterns_Part_2;
 
 public class D8_6_0_1_Triangle_Pattern {
 
-    public static void M_0_1_Triangle_Pattern(int n){
+    public static void trianglePattern(int n){
 
         for(int i=1; i<=n; i++){ //outer loop for line
             for(int j=1; j<=i; j++){ //inner loop for pattern printing
@@ -18,6 +18,6 @@ public class D8_6_0_1_Triangle_Pattern {
     }
 
     public static void main(String[] args) {
-        M_0_1_Triangle_Pattern(5); //function/method calling
+        trianglePattern(5); //function/method calling
     }
 }

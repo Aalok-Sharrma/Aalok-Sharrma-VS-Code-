@@ -9,7 +9,7 @@ public class D9_10_Reverse_An_Array {
     /* THIS QUESTION HAVE VERY IMPORTANT LOGIC AND THIS IMPORTANT LOGIC IS 
        EXPLAINED AND PRACTICALLY SHOWN IN " D9_4_Array_As_Function_Arrguments " file. */
 
-    public static void Reverse_An_Array(int a[]){
+    public static void reverseAnArray(int a[]){
 
         int first = 0;
         int last = a.length-1;
@@ -31,7 +31,7 @@ public class D9_10_Reverse_An_Array {
         int a[] = {1,-2,3,4,-5};
         System.out.println("It is an a[] Array BEFORE it's Reverse : "+Arrays.toString(a));
 
-        Reverse_An_Array(a);
+        reverseAnArray(a);
         System.out.println("It is an a[] Array AFTER it's Reverse  : "+Arrays.toString(a));  
         
         /* How without any return from " public static void Reverse_An_Array(int a[]) " function 

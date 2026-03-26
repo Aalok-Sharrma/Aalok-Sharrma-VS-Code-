@@ -32,38 +32,38 @@ public class D2_9_How_to_take_input_in_java {
         Scanner sc = new Scanner(System.in);
 
         System.out.print("Enter your first name : ");
-        String Input = sc.next();
+        String input = sc.next();
         System.out.print("Enter your full name : ");
-        String Input1 = sc.nextLine();                        // Why this is not working ?
+        String input1 = sc.nextLine();                        // Why this is not working ?
         System.out.print("Enter your age : ");
-        int Input2 = sc.nextInt();
+        int input2 = sc.nextInt();
         System.out.print("Enter your age : ");
-        byte Input3 = sc.nextByte();
+        byte input3 = sc.nextByte();
         System.out.print("Enter your age : ");
-        float Input4 = sc.nextFloat();
+        float input4 = sc.nextFloat();
         System.out.print("Enter your age : ");
-        double Input5 = sc.nextDouble();
+        double input5 = sc.nextDouble();
         System.out.print("Enter your age : ");
-        short Input8 = sc.nextShort();
+        short input8 = sc.nextShort();
         System.out.print("Enter your age : ");
-        long Input9 = sc.nextLong();
+        long input9 = sc.nextLong();
         System.out.print("Are your smart : ");
-        boolean Input6 = sc.nextBoolean();
+        boolean input6 = sc.nextBoolean();
         System.out.print("Are your not smart : ");
-        boolean Input7 = sc.nextBoolean();
+        boolean input7 = sc.nextBoolean();
         
         System.out.println();
 
-        System.out.println("Your first name : "+Input);
-        System.out.println("Your full name : "+Input1);
-        System.out.println("Your int age is : "+Input2);
-        System.out.println("Your byte age is : "+Input3);
-        System.out.println("Your float age is : "+Input4);
-        System.out.println("Your double age is : "+Input5);
-        System.out.println("Your short age is : "+Input8);
-        System.out.println("Your long age is : "+Input9);
-        System.out.println("Your are smart is : "+Input6);
-        System.out.println("Your not smart is : "+Input7);
+        System.out.println("Your first name : "+input);
+        System.out.println("Your full name : "+input1);
+        System.out.println("Your int age is : "+input2);
+        System.out.println("Your byte age is : "+input3);
+        System.out.println("Your float age is : "+input4);
+        System.out.println("Your double age is : "+input5);
+        System.out.println("Your short age is : "+input8);
+        System.out.println("Your long age is : "+input9);
+        System.out.println("Your are smart is : "+input6);
+        System.out.println("Your not smart is : "+input7);
 
 
 

@@ -46,7 +46,7 @@ public class D9_4_Array_As_Function_Arrguments {
 
     */
    
-    public static void Updates(int mark[], int a){
+    public static void updates(int mark[], int a){
 
         a=5;
 
@@ -59,7 +59,7 @@ public class D9_4_Array_As_Function_Arrguments {
     public static void main(String[] args) {
         int a=10;
         int mark[]={1,2,3,4,5};
-        Updates(mark, a);                           // (A)
+        updates(mark, a);                           // (A)
         System.out.println(a);                      // (B)                       
         System.out.println(Arrays.toString(mark));  // (C)
     }

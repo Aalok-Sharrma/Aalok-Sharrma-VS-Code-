@@ -7,14 +7,14 @@ public class D9_2_Array_Creation {
         
         // DataTpye ArrayName[] = New DataType[Size];
 
-        int Marks[] = new int[15];
-        System.out.println(Array.getLength(Marks));
+        int marks[] = new int[15];
+        System.out.println(Array.getLength(marks));
 
-        int Class[] = {4,7,1,2,5};
-        System.out.println(Array.getLength(Class));
+        int cclass[] = {4,7,1,2,5};
+        System.out.println(Array.getLength(cclass));
 
-        String Name[] = {"Aalok Sharrma"};
-        System.out.println(Array.getLength(Name));
+        String name[] = {"Aalok Sharrma"};
+        System.out.println(Array.getLength(name));
         
     }
 }

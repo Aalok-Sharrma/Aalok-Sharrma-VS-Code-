@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class D7_15_Check_if_a_number_is_prime_or_not_optimized_way {
 
-    public static void isprime(int n){
+    public static void isPrime(int n){
 
         if (n <= 1) {
             System.out.println(n + " is not a prime number");
@@ -15,13 +15,13 @@ public class D7_15_Check_if_a_number_is_prime_or_not_optimized_way {
             System.out.println(n+" is a prime number");
             return;
         }else{
-            boolean isprime=true;
+            boolean isPrime=true;
             for(int i = 2; i <= Math.sqrt(n); i++){
                 if(n%i==0){
-                    isprime=false;
+                    isPrime=false;
                     break;
                 }
-            }if(isprime == true){
+            }if(isPrime == true){
                 System.out.println(n+" is a prime number");
             }else{
                 System.out.println(n+" is not a prime number");
@@ -36,7 +36,7 @@ public class D7_15_Check_if_a_number_is_prime_or_not_optimized_way {
         System.out.print("Enter number : ");
         int n=sc.nextInt();
 
-        isprime(n);
+        isPrime(n);
         
     }
 }

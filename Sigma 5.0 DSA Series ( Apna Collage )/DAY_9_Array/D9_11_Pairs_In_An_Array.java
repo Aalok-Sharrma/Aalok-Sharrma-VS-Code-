@@ -2,7 +2,7 @@ package DAY_9_Array;
 
 public class D9_11_Pairs_In_An_Array {
     
-    public static int Pairs_In_An_Array(int a[]){
+    public static int pairsInAnArray(int a[]){
 
      /* 
          ------------------------------ Logic Behind The Condition Part Of i Loop ------------------------------
@@ -25,22 +25,22 @@ public class D9_11_Pairs_In_An_Array {
          
      */ 
 
-        int TotalPairs = 0;
+        int totalPairs = 0;
         for(int i=0; i<a.length; i++){           
             for(int j=i+1; j<a.length; j++){
                 System.out.print(" ["+a[i]+","+a[j]+"] ");
-                TotalPairs++;
+                totalPairs++;
             }
             System.out.println();
         }
 
-        return TotalPairs;
+        return totalPairs;
     }
 
     public static void main(String[] args) {
         
         int a[] = {2,4,6,8,10};
 
-        System.out.println("Total Pairs are : "+Pairs_In_An_Array(a));
+        System.out.println("Total Pairs are : "+pairsInAnArray(a));
     }
 }

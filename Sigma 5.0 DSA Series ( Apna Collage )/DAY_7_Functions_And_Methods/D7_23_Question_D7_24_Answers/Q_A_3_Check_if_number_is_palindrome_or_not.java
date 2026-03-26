@@ -6,20 +6,20 @@ public class Q_A_3_Check_if_number_is_palindrome_or_not {
 
     public static void palindrome(int a){
 
-        int MyNum = a;
-        int Last_Digit = 0;
-        int Reverse = 0;
+        int myNum = a;
+        int lastDigit = 0;
+        int reverse = 0;
 
         while (a > 0) {
-            Last_Digit = a%10;
-            Reverse=(Reverse*10)+Last_Digit;
+            lastDigit = a%10;
+            reverse=(reverse*10)+lastDigit;
             a/=10;
         }
 
-        if(MyNum == Reverse){
-            System.out.println(MyNum+" is palindrome");
+        if(myNum == reverse){
+            System.out.println(myNum+" is palindrome");
         }else{
-            System.out.println(MyNum+" is not palindrome");
+            System.out.println(myNum+" is not palindrome");
         }
 
     }

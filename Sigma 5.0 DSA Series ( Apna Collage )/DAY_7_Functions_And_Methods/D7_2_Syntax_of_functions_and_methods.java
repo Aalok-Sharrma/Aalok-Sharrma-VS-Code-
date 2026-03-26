@@ -19,12 +19,12 @@ public class D7_2_Syntax_of_functions_and_methods {
 
         // Q - Make a function to print 'Aalok Sharrma'
         
-    public static void print_name(){
+    public static void printName(){
         System.out.println("Aalok Sharrma");
     }
     public static void main(String[] args) {
-        print_name();
-        print_name();
-        print_name();
+        printName();
+        printName();
+        printName();
     }
 }

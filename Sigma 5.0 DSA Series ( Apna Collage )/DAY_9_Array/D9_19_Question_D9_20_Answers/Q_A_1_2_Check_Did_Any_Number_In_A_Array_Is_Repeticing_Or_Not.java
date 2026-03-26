@@ -6,7 +6,7 @@ import java.util.HashSet;
 
 public class Q_A_1_2_Check_Did_Any_Number_In_A_Array_Is_Repeticing_Or_Not {
     
-    public static boolean DidAnyNumberRepetedInArray(int[] nums){
+    public static boolean didAnyNumberRepetedInArray(int[] nums){
 
         HashSet<Integer> Set = new HashSet<>();
 
@@ -22,7 +22,7 @@ public class Q_A_1_2_Check_Did_Any_Number_In_A_Array_Is_Repeticing_Or_Not {
     }
     public static void main(String[] args) {
         int[] a={1,2,3,1,6};
-        boolean b=DidAnyNumberRepetedInArray(a); 
+        boolean b=didAnyNumberRepetedInArray(a); 
         if(b == true){
         System.out.println("Yes in array a[] numbers repets");
         }

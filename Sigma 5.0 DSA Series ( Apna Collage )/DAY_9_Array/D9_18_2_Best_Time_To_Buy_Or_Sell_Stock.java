@@ -4,24 +4,24 @@ package DAY_9_Array;
 
 public class D9_18_2_Best_Time_To_Buy_Or_Sell_Stock {
     
-    public static boolean Best_Time_To_Buy_Or_Sell_Stock(int Prices[]){
+    public static boolean bestTimeToBuyOrSellStock(int prices[]){
 
-        int BuyPrice  = Prices[0];
-        int SellPrice = 0;
-        int Profit = 0;
+        int buyPrice  = prices[0];
+        int sellPrice = 0;
+        int profit = 0;
 
-        for(int i=1; i<Prices.length; i++){
-            if(Prices[i]<BuyPrice){
-                BuyPrice = Prices[i];
+        for(int i=1; i<prices.length; i++){
+            if(prices[i]<buyPrice){
+                buyPrice = prices[i];
             }
-            if(Prices[i]>SellPrice){
-                SellPrice = Prices[i];
+            if(prices[i]>sellPrice){
+                sellPrice = prices[i];
             }
         }
-        Profit = SellPrice - BuyPrice;
-        System.out.println("Our Total Profit is : "+Profit);
+        profit = sellPrice - buyPrice;
+        System.out.println("Our Total Profit is : "+profit);
 
-        if(Profit>0){
+        if(profit>0){
             return true;
         }
 
@@ -29,7 +29,7 @@ public class D9_18_2_Best_Time_To_Buy_Or_Sell_Stock {
     }
 
     public static void main(String[] args) {
-        int Prices[] = {7,1,5,3,6,4};
-        System.out.println("We maked some Profit : "+Best_Time_To_Buy_Or_Sell_Stock(Prices));
+        int prices[] = {7,1,5,3,6,4};
+        System.out.println("We maked some Profit : "+bestTimeToBuyOrSellStock(prices));
     }
 }

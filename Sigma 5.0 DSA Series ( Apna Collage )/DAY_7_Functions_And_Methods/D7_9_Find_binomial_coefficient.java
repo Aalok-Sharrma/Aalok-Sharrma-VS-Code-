@@ -13,15 +13,15 @@ public class D7_9_Find_binomial_coefficient {
 
     }
 
-    public static int Bin_Coeff(int n, int r){
+    public static int binCoeff(int n, int r){
 
         long a=factorial(n);
         long b=factorial(r);
         long c=factorial(n-r);
 
-        int Bin_Coeff=(int)(a/(b*c));
+        int binCoeff=(int)(a/(b*c));
         
-        return Bin_Coeff;
+        return binCoeff;
 
     }
     public static void main(String[] args) {
@@ -33,7 +33,7 @@ public class D7_9_Find_binomial_coefficient {
         System.out.print("Enter r of binomial coefficient : ");
         int r=sc.nextInt();
 
-        int BC=Bin_Coeff(n,r);
+        int BC=binCoeff(n,r);
 
         System.out.println("Binomial Coefficiant is = "+BC);
 

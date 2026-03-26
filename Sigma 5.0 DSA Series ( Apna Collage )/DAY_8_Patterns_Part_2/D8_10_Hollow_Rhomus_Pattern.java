@@ -2,7 +2,7 @@ package DAY_8_Patterns_Part_2;
 
 public class D8_10_Hollow_Rhomus_Pattern {
     
-    public static void Hollow_Rhomus_Pattern(int n){
+    public static void hollowRhomusPattern(int n){
         for(int i=1; i<=n; i++){ //outer loop for line
             for(int j=1; j<=n-i; j++){ //inner loop for space printing
                 System.out.print("  ");
@@ -22,6 +22,6 @@ public class D8_10_Hollow_Rhomus_Pattern {
     }
 
     public static void main(String[] args) {
-        Hollow_Rhomus_Pattern(5); //function/method calling
+        hollowRhomusPattern(5); //function/method calling
     }
 }

@@ -4,26 +4,26 @@ package DAY_9_Array;
 
 public class D9_15_1_Max_Subarray_Sum_III_Kadanes_Algorithum {
     
-    public static int Max_Subarray_Sum_III_Kadanes_Algorithum(int a[]){
+    public static int maxSubarraySumIIIKadanesAlgorithum(int a[]){
 
-        int MaxSubarraySum = Integer.MIN_VALUE;
-        int CurrentSum = 0;
+        int maxSubarraySum = Integer.MIN_VALUE;
+        int currentSum = 0;
 
         for(int i=0; i<a.length; i++){
-            CurrentSum+=a[i];
+            currentSum+=a[i];
 
-            if(CurrentSum < 0){
-            CurrentSum = 0;
+            if(currentSum < 0){
+            currentSum = 0;
             }
-            MaxSubarraySum = Math.max(CurrentSum , MaxSubarraySum);
+            maxSubarraySum = Math.max(currentSum , maxSubarraySum);
         }
 
-        return MaxSubarraySum;
+        return maxSubarraySum;
     }
 
     public static void main(String[] args) {
         
         int a[] = {1,5,-2,-6,5,8};
-        System.out.println("Maximum SubArray Sum is : "+Max_Subarray_Sum_III_Kadanes_Algorithum(a));
+        System.out.println("Maximum SubArray Sum is : "+maxSubarraySumIIIKadanesAlgorithum(a));
     }
 }

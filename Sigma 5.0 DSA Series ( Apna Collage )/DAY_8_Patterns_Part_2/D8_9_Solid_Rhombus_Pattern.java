@@ -2,7 +2,7 @@ package DAY_8_Patterns_Part_2;
 
 public class D8_9_Solid_Rhombus_Pattern {
     
-    public static void Solid_Rhombus_Pattern(int n){
+    public static void solidRhombusPattern(int n){
 
         for(int i=1; i<=n; i++){ //outer loop for line
             for(int j=1; j<=n-i; j++){ //inner loop for space printing
@@ -16,6 +16,6 @@ public class D8_9_Solid_Rhombus_Pattern {
     }
 
     public static void main(String[] args) {
-        Solid_Rhombus_Pattern(5); //function/method calling
+        solidRhombusPattern(5); //function/method calling
     }
 }

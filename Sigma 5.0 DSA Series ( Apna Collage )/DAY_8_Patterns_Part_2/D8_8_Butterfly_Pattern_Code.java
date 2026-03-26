@@ -2,7 +2,7 @@ package DAY_8_Patterns_Part_2;
 
 public class D8_8_Butterfly_Pattern_Code {
 
-    public static void Butterfly_Pattern(int n){
+    public static void butterflyPattern(int n){
         //1st half
         for(int i=1; i<=n; i++){ //outer loop for line
             for(int j=1; j<=i; j++){ //inner loop for star printing
@@ -32,7 +32,7 @@ public class D8_8_Butterfly_Pattern_Code {
     }
 
     public static void main(String[] args) {
-        Butterfly_Pattern(5); //function/method calling
+        butterflyPattern(5); //function/method calling
     }
 
     

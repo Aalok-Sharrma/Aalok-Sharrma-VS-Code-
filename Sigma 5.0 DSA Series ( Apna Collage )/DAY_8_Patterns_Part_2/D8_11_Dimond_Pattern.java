@@ -2,7 +2,7 @@ package DAY_8_Patterns_Part_2;
 
 public class D8_11_Dimond_Pattern { // While coding this code I got the logical problem so, if you are revising be carful
       
-    public static void Dimond_Pattern(int n){
+    public static void dimondPattern(int n){
         //1st half
         for(int i=1; i<=n; i++){ //outer loop for line
             for(int j=1; j<=(n-i); j++){ //inner loop for space printing
@@ -27,7 +27,7 @@ public class D8_11_Dimond_Pattern { // While coding this code I got the logical 
     }
 
     public static void main(String[] args) {
-        Dimond_Pattern(4); //function/method calling
+        dimondPattern(4); //function/method calling
     }
 }
 

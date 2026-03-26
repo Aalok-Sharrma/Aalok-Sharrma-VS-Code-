@@ -4,7 +4,7 @@ public class Q_A_1_1_Check_Did_Any_Number_In_A_Array_Is_Repeticing_Or_Not {
 
     // It is a My Code For Did Any Number is Repeted In Array.
     
-    public static boolean DidAnyNumberRepetedInArray(int a[]){
+    public static boolean didAnyNumberRepetedInArray(int a[]){
         for(int i=0; i<a.length; i++){
             for(int j=i+1; j<a.length; j++){
                 if(a[i]==a[j]){
@@ -16,7 +16,7 @@ public class Q_A_1_1_Check_Did_Any_Number_In_A_Array_Is_Repeticing_Or_Not {
     }
     public static void main(String[] args) {
         int[] a={1,2,3,1,6};
-        boolean b=DidAnyNumberRepetedInArray(a);
+        boolean b=didAnyNumberRepetedInArray(a);
         if(b == true){
         System.out.println("Yes in array a[] numbers repets");
         }

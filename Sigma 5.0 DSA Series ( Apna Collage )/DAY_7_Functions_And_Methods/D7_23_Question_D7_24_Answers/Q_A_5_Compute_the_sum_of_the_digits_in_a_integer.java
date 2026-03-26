@@ -4,17 +4,17 @@ import java.util.Scanner;
 
 public class Q_A_5_Compute_the_sum_of_the_digits_in_a_integer {
 
-    public static void Sum_of_the_digits_in_a_integer(long a){
+    public static void sumOfTheDigitsInAInteger(long a){
 
         long sum = 0;
-        long MyNum = a;
+        long myNum = a;
         while (a>0) {
 
-            long Last_Digit = a%10;
-            sum+=Last_Digit;
+            long lastDigit = a%10;
+            sum+=lastDigit;
             a/=10;
 
-        }System.out.println("Sum of digits of "+MyNum+" is : "+sum);
+        }System.out.println("Sum of digits of "+myNum+" is : "+sum);
         
     }
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class Q_A_5_Compute_the_sum_of_the_digits_in_a_integer {
         System.out.print("Enter the integer whose digits sum you want : ");
         long a=sc.nextLong();
 
-        Sum_of_the_digits_in_a_integer(a);
+        sumOfTheDigitsInAInteger(a);
 
     }
 }

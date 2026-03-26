@@ -10,7 +10,7 @@ package DAY_9_Array.D9_19_Question_D9_20_Answers;
 
 public class Q_A_5_2_Triplates_Whos_Sum_Is_0 {
     
-    public static void Triplates_Whos_Sum_Is_0(int a[]){
+    public static void triplatesWhosSumIs0(int a[]){
 
         int b=0;
 
@@ -29,7 +29,7 @@ public class Q_A_5_2_Triplates_Whos_Sum_Is_0 {
     public static void main(String[] args) {
         
         int a[]={-1,0,-1,2,-1,-4};
-        Triplates_Whos_Sum_Is_0(a);
+        triplatesWhosSumIs0(a);
     }
 
 }

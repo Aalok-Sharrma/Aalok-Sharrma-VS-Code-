@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class D7_3_Syntax_of_function_which_have_parameters {
 
-    public static int ClaculateSum(int a, int b){
+    public static int claculateSum(int a, int b){
 
         int sum=a+b;
         return sum;
     }
 
-    public static void ClaculateSum(float a, float b){
+    public static void claculateSum(float a, float b){
 
         int sum=(int)(a+b);
 
         System.out.println("Sum is : "+sum);
     }
 
-    public static void ClaculateSum(){
+    public static void claculateSum(){
 
         Scanner sc = new Scanner(System.in);
 
@@ -52,7 +52,7 @@ public class D7_3_Syntax_of_function_which_have_parameters {
 
         // ------------------------------------(ii)-----------------------------------
 
-        ClaculateSum();
+        claculateSum();
 
         // -----------------------------------(iii)-----------------------------------
 
@@ -63,7 +63,7 @@ public class D7_3_Syntax_of_function_which_have_parameters {
         System.out.print("Enter the second number : ");
         float y=al.nextFloat();
 
-        ClaculateSum(x,y);
+        claculateSum(x,y);
 
         // ------------------------------------(iv)-----------------------------------
 
@@ -74,7 +74,7 @@ public class D7_3_Syntax_of_function_which_have_parameters {
         System.out.print("Enter the second number : ");
         int b=ok.nextInt();
 
-        int add=ClaculateSum(a,b);
+        int add=claculateSum(a,b);
 
         System.out.println("Sum is : "+add);
 

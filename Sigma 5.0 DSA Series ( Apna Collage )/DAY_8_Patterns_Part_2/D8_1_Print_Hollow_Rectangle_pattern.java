@@ -2,7 +2,7 @@ package DAY_8_Patterns_Part_2;
 
 public class D8_1_Print_Hollow_Rectangle_pattern {
 
-    public static void Hollow_Rectangle(int n, int m){
+    public static void hollowRectangle(int n, int m){
 
         
         for(int i=1; i<=n; i++){ //outer loop for line
@@ -25,7 +25,7 @@ public class D8_1_Print_Hollow_Rectangle_pattern {
     
     public static void main(String[] args) {
 
-        Hollow_Rectangle(4,5); //function/method calling
+        hollowRectangle(4,5); //function/method calling
         
     }
 }

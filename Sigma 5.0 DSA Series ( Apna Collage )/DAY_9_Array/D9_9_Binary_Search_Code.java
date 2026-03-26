@@ -2,7 +2,7 @@ package DAY_9_Array;
 
 public class D9_9_Binary_Search_Code {
     
-    public static int Binary_Search(int a[], int key){  /* We can also write this function in another when which is give 
+    public static int binarySearch(int a[], int key){  /* We can also write this function in another when which is give 
                                                            at the end of this file/code but this(which function we are currently runing)
                                                            it the best for the Binary Search below code is just an another way or approach (a little tiwsted approch)*/
         int mid = 0;
@@ -27,7 +27,7 @@ public class D9_9_Binary_Search_Code {
     public static void main(String[] args) {
         int a[] = {-5,-3,-1,1,2,3,5,8,9};
         int key = 0;
-        int ans = Binary_Search(a, key);
+        int ans = binarySearch(a, key);
 
         if(ans>=0){
             System.out.println("we found our key = "+key+" at index no. = "+ans);

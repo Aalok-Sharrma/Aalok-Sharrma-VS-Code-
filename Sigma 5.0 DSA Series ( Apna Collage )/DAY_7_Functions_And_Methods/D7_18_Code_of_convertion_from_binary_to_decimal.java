@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class D7_18_Code_of_convertion_from_binary_to_decimal {
 
-    public static void BinToDec(int BinNum){
+    public static void binToDec(int binNum){
 
-        int MyNum = BinNum;
-        int Pow = 0;
-        int DecNum = 0;
-        while (BinNum > 0) {
+        int myNum = binNum;
+        int pow = 0;
+        int decNum = 0;
+        while (binNum > 0) {
 
-            int LastDigit = BinNum % 10;
-            DecNum = DecNum+(LastDigit*(int) Math.pow(2,Pow));
-            Pow++;
-            BinNum = BinNum/10;
+            int lastDigit = binNum % 10;
+            decNum = decNum+(lastDigit*(int) Math.pow(2,pow));
+            pow++;
+            binNum = binNum/10;
             
-        }System.out.println("Decimal number of "+MyNum+" is : "+DecNum);
+        }System.out.println("Decimal number of "+myNum+" is : "+decNum);
     }
     public static void main(String[] args) {
 
@@ -25,7 +25,7 @@ public class D7_18_Code_of_convertion_from_binary_to_decimal {
         System.out.print("Enter the binary number whose decimal number you needed : ");
         int n=sc.nextInt();
         
-        BinToDec(n);
+        binToDec(n);
 
     }
 }

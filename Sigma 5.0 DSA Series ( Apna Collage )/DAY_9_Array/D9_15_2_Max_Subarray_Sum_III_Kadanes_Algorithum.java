@@ -4,27 +4,27 @@ package DAY_9_Array;
 
 public class D9_15_2_Max_Subarray_Sum_III_Kadanes_Algorithum {
     
-    public static void Max_Min_Subarray_Sum(int a[]){
+    public static void maxMinSubarraySum(int a[]){
 
-        int CurrentMax = 0;
-        int MaxSubarraySum = Integer.MIN_VALUE;
-        int CurrentMin = 0;
-        int MinSubarraySum = Integer.MAX_VALUE;
+        int currentMax = 0;
+        int maxSubarraySum = Integer.MIN_VALUE;
+        int currentMin = 0;
+        int minSubarraySum = Integer.MAX_VALUE;
 
         for(int i=0; i<a.length; i++){
-            CurrentMax = Math.max(CurrentMax + a[i], a[i]);
-            MaxSubarraySum = Math.max(CurrentMax , MaxSubarraySum);
+            currentMax = Math.max(currentMax + a[i], a[i]);
+            maxSubarraySum = Math.max(currentMax , maxSubarraySum);
 
-            CurrentMin = Math.min(CurrentMin + a[i], a[i]);
-            MinSubarraySum = Math.min(CurrentMin, MinSubarraySum);
+            currentMin = Math.min(currentMin + a[i], a[i]);
+            minSubarraySum = Math.min(currentMin, minSubarraySum);
         }
-        System.out.println("Maximum SubArray Sum is : "+MaxSubarraySum);
-        System.out.println("Minimum SubArray Sum is : "+MinSubarraySum);
+        System.out.println("Maximum SubArray Sum is : "+maxSubarraySum);
+        System.out.println("Minimum SubArray Sum is : "+minSubarraySum);
     }
 
     public static void main(String[] args) {
         
         int a[] = {1,5,-2,-6,5,8};
-        Max_Min_Subarray_Sum(a);
+        maxMinSubarraySum(a);
     }
 }
