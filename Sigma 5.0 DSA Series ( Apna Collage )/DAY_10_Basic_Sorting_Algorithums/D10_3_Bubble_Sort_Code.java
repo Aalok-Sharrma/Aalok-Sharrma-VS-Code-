@@ -13,10 +13,10 @@ public class D10_3_Bubble_Sort_Code {
         DescendingBubbleSort dbs = new DescendingBubbleSort();  // Created a object 'dbs' of 'DescendingBubbleSort' class 
         AscendingBubbleSort  abs = new AscendingBubbleSort();   // Created a object 'abs' of 'AscendingBubbleSort' class
 
-        dbs.bubbleSortDescending(a);  // Call the 'bubbleSortDescending()' method which is present in 'DescendingBubbleSort' class and call by it's object 'dbs'
+        dbs.descendingBubbleSort(a);  // Call the 'descendingBubbleSort()' method which is present in 'DescendingBubbleSort' class and call by it's object 'dbs'
         System.out.println("After Descending Bubble Sort  "+Arrays.toString(a)); // printed array a[] after descending bubble sort
 
-        abs.bubbleSortAscending(a);   // Call the 'bubbleSortAscending()' method which is present in 'AscendingBubbleSort' class and call by it's object 'abs'
+        abs.ascendingBubbleSort(a);   // Call the 'ascendingBubbleSort()' method which is present in 'AscendingBubbleSort' class and call by it's object 'abs'
         System.out.println("After Ascending Bubble Sort   "+Arrays.toString(a)); // printed array a[] after ascending bubble sort
 
     }
@@ -24,7 +24,7 @@ public class D10_3_Bubble_Sort_Code {
 
 class DescendingBubbleSort{
 
-    public void bubbleSortDescending(int a[]){
+    public void descendingBubbleSort(int a[]){
 
         int swap = 0; /* We are creating this to check if user has given sort array or not and 
                       if user has given a sorted array then we are not suppose to sort this array */
@@ -50,7 +50,7 @@ class DescendingBubbleSort{
 
 class AscendingBubbleSort{
 
-    public void bubbleSortAscending(int a[]){
+    public void ascendingBubbleSort(int a[]){
 
         int swap = 0; /* We are creating this to check if user has given sort array or not and 
                       if user has given a sorted array then we are not suppose to sort this array */

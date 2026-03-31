@@ -4,7 +4,9 @@ public class D10_2_Bubble_Sort_Logic {
     
     /* 
     
-    Bubble Sort IDEA :- Large elements come to the end of array by swapping with adjacent elements.
+    Bubble Sort IDEA :- 
+      (1) Ascending Order  :- Large elements come to the end of array (unsorted array) by swapping with adjacent elements. [For Ascending  Order]
+      (1) Descending Order :- Small elements come to the end of array (unsorted array) by swapping with adjacent elements. [For Descending Order]
 
        --> Here in bubble sort we swap the elements one by one form i=0 to i=array.length-2;
 
