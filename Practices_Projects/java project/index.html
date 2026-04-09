@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Java Operators Simulator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: rgba(0,0,0,0.3);
+            padding: 20px;
+            border-radius: 15px;
+            width: 400px;
+            margin: auto;
+        }
+
+        select, input, button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            background: #ff7eb3;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ff4f91;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Operator Simulator</h2>
+
+    <!-- Operator Type -->
+    <select id="operatorType" onchange="showOptions()">
+        <option value="">Select Operator Type</option>
+        <option value="arithmetic">Arithmetic</option>
+        <option value="relational">Relational</option>
+        <option value="logical">Logical</option>
+        <option value="assignment">Assignment</option>
+    </select>
+
+    <br>
+
+    <!-- Operator Selection -->
+    <select id="operator"></select>
+
+    <br>
+
+    <!-- Inputs -->
+    <input type="number" id="num1" placeholder="Enter first value">
+    <input type="number" id="num2" placeholder="Enter second value">
+
+    <br>
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function showOptions() {
+    let type = document.getElementById("operatorType").value;
+    let operator = document.getElementById("operator");
+
+    operator.innerHTML = "";
+
+    if (type === "arithmetic") {
+        operator.innerHTML = `
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        `;
+    }
+
+    else if (type === "relational") {
+        operator.innerHTML = `
+            <option value=">">></option>
+            <option value="<"><</option>
+            <option value="==">==</option>
+            <option value="!=">!=</option>
+        `;
+    }
+
+    else if (type === "logical") {
+        operator.innerHTML = `
+            <option value="&&">AND (&&)</option>
+            <option value="||">OR (||)</option>
+        `;
+    }
+
+    else if (type === "assignment") {
+        operator.innerHTML = `
+            <option value="=">=</option>
+            <option value="+=">+=</option>
+            <option value="-=">-=</option>
+        `;
+    }
+}
+
+function calculate() {
+    let op = document.getElementById("operator").value;
+    let a = Number(document.getElementById("num1").value);
+    let b = Number(document.getElementById("num2").value);
+
+    let result;
+
+    switch(op) {
+        case "+": result = a + b; break;
+        case "-": result = a - b; break;
+        case "*": result = a * b; break;
+        case "/": result = a / b; break;
+        case "%": result = a % b; break;
+
+        case ">": result = a > b; break;
+        case "<": result = a < b; break;
+        case "==": result = a == b; break;
+        case "!=": result = a != b; break;
+
+        case "&&": result = (a && b); break;
+        case "||": result = (a || b); break;
+
+        case "=": result = b; break;
+        case "+=": result = a += b; break;
+        case "-=": result = a -= b; break;
+
+        default: result = "Invalid";
+    }
+
+    document.getElementById("result").innerHTML = "Result: " + result;
+}
+</script>
+
+</body>
+</html>

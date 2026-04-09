@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Operator Simulator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: rgba(0, 0, 50, 0.4);
+            padding: 25px;
+            border-radius: 15px;
+            width: 420px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        select, input, button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+
+        button {
+            background: #4facfe;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #00c6ff;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #cce6ff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Advanced Operator Simulator</h2>
+
+    <!-- Category -->
+    <select id="category" onchange="loadOperators()">
+        <option value="">Select Operator Type</option>
+        <option value="arithmetic">Arithmetic</option>
+        <option value="unary">Unary</option>
+        <option value="relational">Relational</option>
+        <option value="logical">Logical</option>
+        <option value="assignment">Assignment</option>
+        <option value="bitwise">Bitwise</option>
+        <option value="shift">Shift</option>
+        <option value="ternary">Ternary</option>
+        <option value="instanceof">Instanceof</option>
+    </select>
+
+    <!-- Operators -->
+    <select id="operator" onchange="updateInput()"></select>
+
+    <!-- Input -->
+    <input type="text" id="inputBox" placeholder="Enter values">
+
+    <button onclick="calculate()">Calculate</button>
+
+    <div id="result"></div>
+</div>
+
+<script>
+function loadOperators() {
+    let cat = document.getElementById("category").value;
+    let op = document.getElementById("operator");
+
+    let options = {
+        arithmetic: ["+", "-", "*", "/", "%"],
+        unary: ["++", "--", "!"],
+        relational: [">", "<", ">=", "<=", "==", "!="],
+        logical: ["&&", "||"],
+        assignment: ["=", "+=", "-=", "*=", "/="],
+        bitwise: ["&", "|", "^", "~"],
+        shift: ["<<", ">>"],
+        ternary: ["?:"],
+        instanceof: ["instanceof"]
+    };
+
+    op.innerHTML = "";
+    if (options[cat]) {
+        options[cat].forEach(o => {
+            op.innerHTML += `<option value="${o}">${o}</option>`;
+        });
+    }
+
+    updateInput();
+}
+
+function updateInput() {
+    let cat = document.getElementById("category").value;
+    let input = document.getElementById("inputBox");
+
+    if (cat === "logical") {
+        input.placeholder = "Example: 2<3 && 4>5";
+    } 
+    else if (cat === "ternary") {
+        input.placeholder = "Example: 5>3 ? 10 : 20";
+    } 
+    else if (cat === "instanceof") {
+        input.placeholder = "Example: [] instanceof Array";
+    } 
+    else if (cat === "unary") {
+        input.placeholder = "Enter single number (e.g., 5)";
+    } 
+    else {
+        input.placeholder = "Enter two numbers separated by comma (e.g., 5,3)";
+    }
+}
+
+function calculate() {
+    let cat = document.getElementById("category").value;
+    let op = document.getElementById("operator").value;
+    let input = document.getElementById("inputBox").value;
+    let result;
+
+    try {
+        if (cat === "logical" || cat === "ternary" || cat === "instanceof") {
+            result = eval(input);
+        } 
+        else if (cat === "unary") {
+            let a = Number(input);
+            if (op === "++") result = ++a;
+            else if (op === "--") result = --a;
+            else if (op === "!") result = !a;
+        } 
+        else {
+            let parts = input.split(",");
+            let a = Number(parts[0]);
+            let b = Number(parts[1]);
+
+            switch(op) {
+                case "+": result = a + b; break;
+                case "-": result = a - b; break;
+                case "*": result = a * b; break;
+                case "/": result = a / b; break;
+                case "%": result = a % b; break;
+
+                case ">": result = a > b; break;
+                case "<": result = a < b; break;
+                case ">=": result = a >= b; break;
+                case "<=": result = a <= b; break;
+                case "==": result = a == b; break;
+                case "!=": result = a != b; break;
+
+                case "&&": result = a && b; break;
+                case "||": result = a || b; break;
+
+                case "=": result = b; break;
+                case "+=": result = a += b; break;
+                case "-=": result = a -= b; break;
+                case "*=": result = a *= b; break;
+                case "/=": result = a /= b; break;
+
+                case "&": result = a & b; break;
+                case "|": result = a | b; break;
+                case "^": result = a ^ b; break;
+                case "~": result = ~a; break;
+
+                case "<<": result = a << b; break;
+                case ">>": result = a >> b; break;
+
+                default: result = "Invalid";
+            }
+        }
+
+        document.getElementById("result").innerHTML = "Result: " + result;
+
+    } catch (e) {
+        document.getElementById("result").innerHTML = "Invalid Input ❌";
+    }
+}
+</script>
+
+</body>
+</html>
