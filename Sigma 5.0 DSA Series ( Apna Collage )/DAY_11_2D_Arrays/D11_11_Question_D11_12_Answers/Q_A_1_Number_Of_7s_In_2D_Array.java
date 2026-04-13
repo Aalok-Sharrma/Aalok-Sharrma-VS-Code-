@@ -23,11 +23,14 @@ public class Q_A_1_Number_Of_7s_In_2D_Array {
         
         // NumberOf7s n7 = new NumberOf7s(); 
         
+
+        // -------------------(Way-1 to call a static method (or) inner class static method )-------------------
+
         // Here in this case we don't need to create a object for a class as we can call 
         // "numberOf7s()" static method by it class name "NumberOf7s" as the method is a static method
 
         int a[][]={{1,2,7,3,7},{7,7,1,9,7}};
-        System.out.println("There are "+NumberOf7s.numberOf7s(a)+"Total numbers of 7's in array a[][]");
+        System.out.println("There are "+NumberOf7s.numberOf7s(a)+" Total numbers of 7's in array a[][]");
 
         /* In above line I can call "numberOf7s()" method of "NumberOf7s" class by it's class object(n7) 
            also like "n7.numberOf7s(a)" as we call every method in OOPs but in this case "numberOf7s()" 
@@ -36,6 +39,14 @@ public class Q_A_1_Number_Of_7s_In_2D_Array {
            case we don't need to create a object for a class as we can call "numberOf7s()" static method 
            by it class name "NumberOf7s" as the method is a static method */
         
+
+        // -------------------(Way-2 to call a static method (or) inner class static method )-------------------
+
+        Q_A_1_Number_Of_7s_In_2D_Array.NumberOf7s n7 = new Q_A_1_Number_Of_7s_In_2D_Array.NumberOf7s();
+
+        System.out.println("There are "+n7.numberOf7s(a)+" Total numbers of 7's in array a[][]");
+
+
     }
     
 }
