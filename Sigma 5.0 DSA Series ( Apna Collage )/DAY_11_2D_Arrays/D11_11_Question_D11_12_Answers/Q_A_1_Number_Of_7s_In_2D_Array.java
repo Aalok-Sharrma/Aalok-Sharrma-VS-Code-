@@ -47,6 +47,58 @@ public class Q_A_1_Number_Of_7s_In_2D_Array {
         System.out.println("There are "+n7.numberOf7s(a)+" Total numbers of 7's in array a[][]");
 
 
+        /* Here  "NumberOf7s" is a inner class of "Q_A_1_Number_Of_7s_In_2D_Array" outer class 
+        so to call inner class(NumberOf7s) in a main method(public static void main(String[] args)) 
+        we should understand below concept..
+
+        To call or instantiate an inner class in Java, the approach depends on whether the inner class is non-static (member inner class) or static (static nested class). 
+         1. Calling a Non-Static Inner Class
+            A non-static inner class is tied to an instance of the outer class. To instantiate it, you must first create an object of the outer class. 
+
+            Syntax: OuterClass.InnerClass inner = outerObject.new InnerClass();.
+            
+            Example:
+
+            class Outer {
+                class Inner {
+                  void show() { System.out.println("In Inner Class"); }
+                }
+            }
+
+            public class Main {
+                public static void main(String[] args) {
+                    Outer outer = new Outer(); // Step 1: Create Outer object
+                    Outer.Inner inner = outer.new Inner(); // Step 2: Create Inner object
+                    inner.show();
+                }
+            }
+
+        2. Calling a Static Nested Class
+           Static nested classes do not require an instance of the outer class for instantiation. They behave like other top-level classes but are nested for packaging convenience. 
+
+           Syntax: OuterClass.StaticNestedClass nestedObject = new OuterClass.StaticNestedClass();.
+           
+           Example:
+
+           class Outer {
+             static class StaticInner {
+               void show() { System.out.println("In Static Nested Class"); }
+             }
+           }
+
+           public class Main {
+              public static void main(String[] args) {
+                Outer.StaticInner inner = new Outer.StaticInner(); // Direct instantiation
+                 inner.show();
+              }
+           }
+
+           3. Other Specialized Types
+              Method-Local Inner Class: Defined inside a method and can only be instantiated within that specific method.
+              Anonymous Inner Class: Declared and instantiated simultaneously in a single statement, often used for one-time implementations of interfaces or abstract classes. 
+
+              For more detailed technical documentation, you can refer to the official Oracle Java Tutorial on Nested Classes or W3Schools' Java Inner Classes guide
+        */
     }
     
 }
