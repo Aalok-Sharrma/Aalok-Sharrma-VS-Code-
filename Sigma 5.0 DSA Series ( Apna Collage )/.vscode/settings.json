@@ -1,0 +1,6 @@
+{
+    // "explorer.sortOrder": "mixed",
+    // "explorer.sortOrderLexicographicOptions": "default",
+    "java.dependency.packagePresentation": "hierarchical",
+    "java.dependency.syncWithFolderExplorer": true
+}
