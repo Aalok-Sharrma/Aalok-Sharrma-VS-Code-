@@ -1,0 +1,29 @@
+package DAY_09_Array.D9_19_Question_D9_20_Answers;
+
+// It is a Shradha Kapara Ma'am Code For Best Time To Buy Or Sell Stock
+
+public class Q_A_3_1_Best_Time_To_Buy_Or_Sell_Stock {
+    
+    public static int bestTimeToBuyOrSellStock(int prices[]){
+
+        int buyPrice = Integer.MAX_VALUE;   // here we can have BuyPrice = Prices[0];
+        int maxProfit = 0;
+        for(int i=0; i<prices.length; i++){ // here we can start loop with i=1 if BuyPrice is initialted with Prices[0] (means BuyPrice = Prices[0])
+
+            if(prices[i]>buyPrice){
+                int profit = prices[i] - buyPrice;
+                maxProfit = Math.max(maxProfit, profit);
+
+            }else{
+                buyPrice = prices[i];
+            }
+        }
+        return maxProfit;
+    }
+    
+    public static void main(String[] args) {
+        
+        int prices[] = {7,1,5,3,6,4};
+        System.out.println("Maximum Profit which we can make is : "+bestTimeToBuyOrSellStock(prices));
+    }
+}
